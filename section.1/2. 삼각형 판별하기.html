@@ -1,0 +1,27 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>출력결과</title>
+</head>
+
+<body>
+  <script>
+    function solution(a, b, c) {
+      // 삼각형이 되기 위해선 짧은 두 막대의 합이 가장 긴 막대길이보다 길어야 한다.
+      let answer = "YES", max;
+      let sum = a + b + c;
+
+      if (a > b) max = a;
+      else max = b;
+      if (c > max) max = c;
+      if ((sum - max) <= max) answer = "NO";
+
+      return answer;
+    }
+
+    console.log(solution(13, 33, 17));
+  </script>
+</body>
+
+</html>
